@@ -11,6 +11,6 @@ node {
        sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-ansible.sh"
    
    stage 'Infastructure Syntax Playbooks Check'
-       sh "/usr/local/bin/openstack-ansible /opt/openstack-ansible/playbooks/setup-infrastructure.yml --syntax-check"
+       sh "sudo /usr/local/bin/openstack-ansible /opt/openstack-ansible/playbooks/setup-infrastructure.yml --syntax-check"
 
 }
