@@ -8,7 +8,8 @@ node {
        if (!folder.exists()) {
        sh "sudo git clone -b 16.0.23 https://git.openstack.org/openstack/openstack-ansible /opt/openstack-ansible"
        }
-       sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-ansible.sh ; sudo scripts/bootstrap-aio.sh"
+       sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-ansible.sh" 
+       sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-aio.sh"
    
    stage 'Infastructure Syntax Playbooks Check'
        sh "sudo /usr/local/bin/openstack-ansible /opt/openstack-ansible/playbooks/setup-infrastructure.yml --syntax-check"
