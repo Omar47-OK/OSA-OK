@@ -16,7 +16,7 @@ sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-ansible.sh"
 stage 'Bootstrapping Environment'
 sh "cd /opt/openstack-ansible ; sudo scripts/bootstrap-aio.sh"
 
-Stage 'Settings Integrity AIO Check '
+stage 'Settings Integrity AIO Check '
 sh "sudo /usr/local/bin/openstack-ansible" etc/openstack_deploy/openstack_user_config.yml.aio --syntax-check"
 
 stage 'Host Syntax Integrity Check'
